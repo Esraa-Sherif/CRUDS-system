@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css"/>
+        <title>CRUDS Data System</title>
+        <!-- Create - Read - Update - Delete - Search (PHP/C#/JS✔)
+        By Esraa Sherif-->
+    </head>
+    <body>
+        <div class="crud">
+            <div class="head">
+    
+                <h1>CRUDS System
+                    <span> For Data Management </span></h1>
+                <h2>(Create - Read - Update - Delete - Search)</h2>
+            </div>
+            <div class="inputs">
+                <input type="text" id="title" placeholder="Title">
+                <div class="price">
+                    <input onkeyup="getTotal()" type="number" id="price" placeholder="Price">
+                    <input onkeyup="getTotal()" type="number" id="taxes" placeholder="Taxes">
+                    <input onkeyup="getTotal()" type="number" id="ads" placeholder="Ads">
+                    <input onkeyup="getTotal()" type="number" id="discount" placeholder="Discount">
+                    <small id="total"></small>
+
+                </div>
+                <input type="number" id="count" placeholder="Count">
+                <input type="text" id="category" placeholder="Category">
+                <button id="submit">Create</button>
+
+
+            </div>
+            <div class="outputs">
+                <div class="searchBlock">
+                    <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="Search">
+                    <div class="btnSearch">
+                        <button onclick="getSearchMode(this.id)" id="searchTitle">search By Title</button>
+                        <button onclick="getSearchMode(this.id)" id="searchCategory">search By Category</button>
+                    </div>
+                    <div id="deleteAll">
+
+                    </div>
+                <table>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <td>Price</td>
+                        <td>Taxes</td>
+                        <td>Ads</td>
+                        <td>Discount</td>
+                        <td>Total</td>
+                        <td>Count</td>
+                        <td>Category</td>
+                        <td>Update</td>
+                        <td>Delete</td>
+                    </tr>
+                    <tbody id="tbody">
+                    
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html> 
